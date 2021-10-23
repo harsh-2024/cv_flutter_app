@@ -50,13 +50,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   bottomLeft: Radius.circular(80),
                   bottomRight: Radius.circular(80))),
           stretch: true,
-          snap: true,
+          snap: false,
           elevation: 70.0,
           floating: true,
           pinned: true,
           expandedHeight: 400,
           flexibleSpace: FlexibleSpaceBar(
+            background: ClipRRect(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(40),
+                bottomRight: Radius.circular(40),
+              ),
+              child: Image(
+                fit: BoxFit.none,
+                image: AssetImage('images/cover_page.jpeg'),
+              ),
+            ),
             title: Text('My Portfolio'),
+            // stretchModes: <StretchMode>[
+            //   StretchMode.zoomBackground,
+            //   StretchMode.blurBackground
+            // ],
           ),
         ),
         SliverFillRemaining(
@@ -69,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(
                     children: <Widget>[
                       SizedBox(
-                        width: 20,
+                        width: 10,
                       ),
                       Container(
                           width: 100.0,
@@ -125,39 +139,47 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                       child: Row(
                     children: <Widget>[
-                      Card(
+                      Expanded(
+                        child: Card(
+                            color: Colors.blue.shade100,
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: Text('C++'),
+                            )),
+                      ),
+                      Expanded(
+                        child: Card(
                           color: Colors.blue.shade100,
                           margin: EdgeInsets.symmetric(horizontal: 10),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 10),
-                            child: Text('C++'),
-                          )),
-                      Card(
-                        color: Colors.blue.shade100,
-                        margin: EdgeInsets.symmetric(horizontal: 10),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 10),
-                          child: Text('Python'),
+                            child: Text('Python'),
+                          ),
                         ),
                       ),
-                      Card(
-                          color: Colors.blue.shade100,
-                          margin: EdgeInsets.symmetric(horizontal: 10),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 10),
-                            child: Text('HTML'),
-                          )),
-                      Card(
-                          color: Colors.blue.shade100,
-                          margin: EdgeInsets.symmetric(horizontal: 10),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 10),
-                            child: Text('Flutter'),
-                          ))
+                      Expanded(
+                        child: Card(
+                            color: Colors.blue.shade100,
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: Text('HTML'),
+                            )),
+                      ),
+                      Expanded(
+                        child: Card(
+                            color: Colors.blue.shade100,
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: Text('HTML'),
+                            )),
+                      ),
                     ],
                   )),
                   SizedBox(
@@ -245,77 +267,49 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Container(
-                      child: Column(
+                      child: Row(
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Icon(
-                            Icons.insights_sharp,
-                            color: Colors.blue.shade200,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card(
+                      Expanded(
+                        child: Card(
                             color: Colors.blue.shade100,
+                            margin: EdgeInsets.symmetric(horizontal: 10),
                             child: Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 10),
                               child: Text('Travelling'),
-                            ),
-                          )
-                        ],
+                            )),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(
-                            width: 15,
+                      Expanded(
+                        child: Card(
+                          color: Colors.blue.shade100,
+                          margin: EdgeInsets.only(right: 5),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 4, vertical: 7),
+                            child: Text('Binging Netflix'),
                           ),
-                          Icon(
-                            Icons.insights_sharp,
-                            color: Colors.blue.shade200,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card(
+                        ),
+                      ),
+                      Expanded(
+                        child: Card(
                             color: Colors.blue.shade100,
+                            margin: EdgeInsets.symmetric(horizontal: 3),
                             child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 10),
-                              child: Text('Binging Netflix'),
-                            ),
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Icon(
-                            Icons.insights_sharp,
-                            color: Colors.blue.shade200,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card(
-                            color: Colors.blue.shade100,
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 10),
+                                  horizontal: 7, vertical: 10),
                               child: Text('Singing'),
-                            ),
-                          )
-                        ],
-                      )
+                            )),
+                      ),
+                      Expanded(
+                        child: Card(
+                            color: Colors.blue.shade100,
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 7, vertical: 10),
+                              child: Text('Badminton'),
+                            )),
+                      ),
                     ],
                   )),
                   SizedBox(
