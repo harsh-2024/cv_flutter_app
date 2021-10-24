@@ -56,17 +56,17 @@ class _MyHomePageState extends State<MyHomePage> {
           pinned: true,
           expandedHeight: 400,
           flexibleSpace: FlexibleSpaceBar(
-            background: ClipRRect(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
-              ),
-              child: Image(
-                fit: BoxFit.fill,
-                image: NetworkImage(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEg7gm1qHZcPesYD6R0uPUruiICLPYSzl0iHDia46LeyjHejiZ633qoaePTjxuBqHbBa0&usqp=CAU'),
-              ),
-            ),
+            // background: ClipRRect(
+            //   borderRadius: BorderRadius.only(
+            //     bottomLeft: Radius.circular(40),
+            //     bottomRight: Radius.circular(40),
+            //   ),
+            //   child: Image(
+            //     fit: BoxFit.fill,
+            //     image: NetworkImage(
+            //         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEg7gm1qHZcPesYD6R0uPUruiICLPYSzl0iHDia46LeyjHejiZ633qoaePTjxuBqHbBa0&usqp=CAU'),
+            //   ),
+            // ),
             title: Text('My Portfolio'),
             // stretchModes: <StretchMode>[
             //   StretchMode.zoomBackground,
@@ -87,11 +87,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 10,
                       ),
                       Container(
-                          width: 100.0,
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage('images/pro_pic.jpeg'),
-                            radius: 60.0,
-                          )),
+                        width: 130.0,
+                        // margin: EdgeInsets.only(right: 10),
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage('images/pro_pic.jpeg'),
+                          radius: 70.0,
+                        ),
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border:
+                                Border.all(color: Colors.black26, width: 4.0)),
+                      ),
                       SizedBox(
                         width: 40,
                       ),
@@ -351,7 +357,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 10, vertical: 10),
                                 child: Text(
-                                    'Made a Turtle Race Game in Python. \n Link to the project: \n https://github.com/harsh-2024/ace-the-race')),
+                                    'Made a Turtle Race Game in Python. \nLink to the project: \n\nhttps://github.com/harsh-2024/ace-the-race')),
                             // child: InkWell(
                             //   child: Text('open browser'),
                             //   onTap: () => launch(
