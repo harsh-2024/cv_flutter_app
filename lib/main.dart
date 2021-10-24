@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -67,7 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
             //         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEg7gm1qHZcPesYD6R0uPUruiICLPYSzl0iHDia46LeyjHejiZ633qoaePTjxuBqHbBa0&usqp=CAU'),
             //   ),
             // ),
-            title: Text('My Portfolio'),
+            title: Text(
+              'My Portfolio',
+              style: TextStyle(fontSize: 25),
+            ),
             // stretchModes: <StretchMode>[
             //   StretchMode.zoomBackground,
             //   StretchMode.blurBackground
@@ -123,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         color: Colors.blue.shade100,
+                        border: Border.all(color: Colors.black26, width: 4.0),
                         borderRadius: BorderRadius.all(Radius.circular(20))),
                     child: Text(
                         'Persuing Bachelors in C.S.E from Ajay Kumar Garg Engineering College, Ghaziabad. Coding Enthusiast who loves to build real time softwares and Projects.'
