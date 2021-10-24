@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 70.0,
           floating: true,
           pinned: true,
-          expandedHeight: 400,
+          expandedHeight: 100,
           flexibleSpace: FlexibleSpaceBar(
             // background: ClipRRect(
             //   borderRadius: BorderRadius.only(
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // ),
             title: Text(
               'My Portfolio',
-              style: TextStyle(fontSize: 25),
+              style: TextStyle(fontSize: 25, fontFamily: 'Lobster'),
             ),
             // stretchModes: <StretchMode>[
             //   StretchMode.zoomBackground,
