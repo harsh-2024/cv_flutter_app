@@ -62,8 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 bottomRight: Radius.circular(40),
               ),
               child: Image(
-                fit: BoxFit.none,
-                image: AssetImage('images/cover_page.jpeg'),
+                fit: BoxFit.fill,
+                image: NetworkImage(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEg7gm1qHZcPesYD6R0uPUruiICLPYSzl0iHDia46LeyjHejiZ633qoaePTjxuBqHbBa0&usqp=CAU'),
               ),
             ),
             title: Text('My Portfolio'),
@@ -92,12 +93,12 @@ class _MyHomePageState extends State<MyHomePage> {
                             radius: 60.0,
                           )),
                       SizedBox(
-                        width: 10,
+                        width: 40,
                       ),
                       Column(
                         children: <Widget>[
                           SizedBox(
-                            height: 20,
+                            height: 1,
                           ),
                           Text(
                             'HARSH TRIPATHI',
@@ -177,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 10),
-                              child: Text('HTML'),
+                              child: Text('Flutter'),
                             )),
                       ),
                     ],
@@ -209,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Icon(
                             Icons.insights_sharp,
-                            color: Colors.blue.shade200,
+                            color: Colors.black87,
                           ),
                           SizedBox(
                             width: 15,
@@ -232,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Icon(
                             Icons.insights_sharp,
-                            color: Colors.blue.shade200,
+                            color: Colors.black87,
                           ),
                           SizedBox(
                             width: 15,
@@ -275,7 +276,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             margin: EdgeInsets.symmetric(horizontal: 10),
                             child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 10),
+                                  horizontal: 7, vertical: 10),
                               child: Text('Travelling'),
                             )),
                       ),
@@ -306,7 +307,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             margin: EdgeInsets.symmetric(horizontal: 10),
                             child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 7, vertical: 10),
+                                  horizontal: 5, vertical: 10),
                               child: Text('Badminton'),
                             )),
                       ),
@@ -339,7 +340,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Icon(
                             Icons.insights_sharp,
-                            color: Colors.blue.shade200,
+                            color: Colors.black87,
                           ),
                           SizedBox(
                             width: 15,
@@ -367,7 +368,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Icon(
                             Icons.insights_sharp,
-                            color: Colors.blue.shade200,
+                            color: Colors.black87,
                           ),
                           SizedBox(
                             width: 15,
@@ -391,7 +392,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Icon(
                             Icons.insights_sharp,
-                            color: Colors.blue.shade200,
+                            color: Colors.black87,
                           ),
                           SizedBox(
                             width: 15,
