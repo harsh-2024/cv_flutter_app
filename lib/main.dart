@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -67,9 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
             //         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEg7gm1qHZcPesYD6R0uPUruiICLPYSzl0iHDia46LeyjHejiZ633qoaePTjxuBqHbBa0&usqp=CAU'),
             //   ),
             // ),
-            title: Text(
-              'My Portfolio',
-              style: TextStyle(fontSize: 25, fontFamily: 'Lobster'),
+
+            title: Container(
+              margin: EdgeInsets.only(left: 30),
+              child: Text(
+                'My Portfolio',
+                style: TextStyle(fontSize: 25, fontFamily: 'Lobster'),
+              ),
             ),
             // stretchModes: <StretchMode>[
             //   StretchMode.zoomBackground,
@@ -269,12 +273,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       indent: 15,
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      'Hobbies : ',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 25),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Expanded(
+                      //padding: EdgeInsets.all(10),
+                      child: Text(
+                        'Hobbies : ',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 25),
+                      ),
                     ),
                   ),
                   Container(
@@ -360,13 +367,14 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 10, vertical: 10),
-                                child: Text(
-                                    'Made a Turtle Race Game in Python. \nLink to the project: \n\nhttps://github.com/harsh-2024/ace-the-race')),
-                            // child: InkWell(
-                            //   child: Text('open browser'),
-                            //   onTap: () => launch(
-                            //       'https://github.com/harsh-2024/ace-the-race'),
-                            // )),
+                                // child: Text(
+                                //     'Made a Turtle Race Game in Python. \nLink to the project: \n\nhttps://github.com/harsh-2024/ace-the-race')),
+                                child: InkWell(
+                                  child: Text(
+                                      'Made a Turtle Race Game in Python. \nLink to the project: \n\nhttps://github.com/harsh-2024/ace-the-race'),
+                                  onTap: () => launch(
+                                      'https://github.com/harsh-2024/ace-the-race'),
+                                )),
                           )
                         ],
                       ),
