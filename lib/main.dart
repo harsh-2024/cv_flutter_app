@@ -395,10 +395,15 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Card(
                             color: Colors.blue.shade100,
                             child: Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Text(
-                                  'Made a GUI Application based Convertor App using Tkinter based on Python. \nLink to the project: \n https://github.com/harsh-2024/GUI-application/blob/master/README.md'),
-                            ),
+                                padding: EdgeInsets.all(10),
+                                // child: Text(
+                                //     'Made a GUI Application based Convertor App using Tkinter based on Python. \nLink to the project: \n https://github.com/harsh-2024/GUI-application/blob/master/README.md'),
+                                child: InkWell(
+                                  child: Text(
+                                      'Made a GUI Application based Convertor App using Tkinter based on Python. \nLink to the project: \n https://github.com/harsh-2024/GUI-application/blob/master/README.md'),
+                                  onTap: () => launch(
+                                      'https://github.com/harsh-2024/GUI-application/blob/master/README.md'),
+                                )),
                           ))
                         ],
                       ),
@@ -419,10 +424,15 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Card(
                             color: Colors.blue.shade100,
                             child: Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Text(
-                                  'Made the personal Portfolio website using HTML, CSS and Bootstrap. \nLink to the website: \n https://harsh-2024.github.io/My-portfolio/index.html'),
-                            ),
+                                padding: EdgeInsets.all(10),
+                                // child: Text(
+                                //     'Made the personal Portfolio website using HTML, CSS and Bootstrap. \nLink to the website: \n https://harsh-2024.github.io/My-portfolio/index.html'),
+                                child: InkWell(
+                                  child: Text(
+                                      'Made the personal Portfolio website using HTML, CSS and Bootstrap. \nLink to the website: \n https://harsh-2024.github.io/My-portfolio/index.html'),
+                                  onTap: () => launch(
+                                      'https://harsh-2024.github.io/My-portfolio/index.html'),
+                                )),
                           ))
                         ],
                       )
